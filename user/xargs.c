@@ -37,7 +37,7 @@ int main(int argc, char** argv){
                 pa=args;
             }
             
-        }
+        }f
         p++;
     }
     if(pa != args){
