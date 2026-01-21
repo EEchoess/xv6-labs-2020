@@ -1,0 +1,1 @@
+在做lab3 A kernel page table per process (hard)时，在改scheduler时swtch后没有调用kvminithart()切换回内核页表
