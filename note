@@ -1,1 +1,5 @@
 在做lab3 A kernel page table per process (hard)时，在改scheduler时swtch后没有调用kvminithart()切换回内核页表
+场景	                行为
+用户非法行为	            kill
+资源不足（kalloc 失败）	kill
+内核逻辑不可能发生的情况	panic
