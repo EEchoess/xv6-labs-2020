@@ -393,10 +393,11 @@ int
 copyout(pagetable_t pagetable, uint64 dstva, char *src, uint64 len)
 {
   uint64 n, va0, pa0;
-  if(uvmcheckcowpage(dstva)){
-    uvmcowcopy(dstva);
-  }
+
   while(len > 0){
+    if(uvmcheckcowpage(dstva)){
+      uvmcowcopy(dstva);
+    }
     va0 = PGROUNDDOWN(dstva);
     pa0 = walkaddr(pagetable, va0);
     if(pa0 == 0)
