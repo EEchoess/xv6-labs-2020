@@ -3,3 +3,6 @@
 用户非法行为	            kill
 资源不足（kalloc 失败）	kill
 内核逻辑不可能发生的情况	panic
+
+调试：
+用vmprint看函数调用栈
